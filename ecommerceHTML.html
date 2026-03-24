@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - E-commerce</title>
+  <link rel="stylesheet" href="eco.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>ShopEasy</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showCategory('all')">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Products ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="showCategory('electronics')">Electronics</a></li>
+            <li><a href="#" onclick="showCategory('fashion')">Fashion</a></li>
+            <li><a href="#" onclick="showCategory('accessories')">Accessories</a></li>
+          </ul>
+        </li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#" onclick="showCategory('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <div class="search-bar">
+    <input type="text" placeholder="Search products..." id="search">
+    <button onclick="searchProduct()">Search</button>
+  </div>
+
+
+  <section class="hero">
+    <h2>Welcome to ShopEasy</h2>
+    <p>Best deals on your favorite products!</p>
+  </section>
+
+
+  <section class="products">
+    <div class="product" data-category="electronics">
+      <img src="https://t4.ftcdn.net/jpg/15/24/60/01/360_F_1524600140_XrroOjQolINb8tKJ9yEq9kYjQMceqoTD.jpg" alt="Headphones">
+      <h3>Wireless Headphones</h3>
+      <p>$49</p>
+      <button onclick="addToCart('Wireless Headphones',49)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="electronics">
+      <img src="https://cdn.dribbble.com/userupload/14960250/file/original-f8ffc8c566ba19e8dc50b40c5a5f8e23.jpg?resize=400x0" alt="Smartwatch">
+      <h3>Smartwatch</h3>
+      <p>$120</p>
+      <button onclick="addToCart('Smartwatch',120)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="fashion">
+      <img src="https://cdn.pixabay.com/photo/2015/11/05/22/31/sneakers-1024973_1280.jpg" alt="Sneakers">
+      <h3>Running Sneakers</h3>
+      <p>$75</p>
+      <button onclick="addToCart('Running Sneakers',75)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="fashion">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvjFhHSJlE2citL38hynkVbvvCI4gxExH-jg&s" alt="Jacket">
+      <h3>Leather Jacket</h3>
+      <p>$150</p>
+      <button onclick="addToCart('Leather Jacket',150)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="accessories">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLF4uic-7Az7_1Cq4YfV5Iyo_EhHBdRP3g_w&s" alt="Backpack">
+      <h3>Travel Backpack</h3>
+      <p>$60</p>
+      <button onclick="addToCart('Travel Backpack',60)">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="accessories">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400" alt="Sunglasses">
+      <h3>Stylish Sunglasses</h3>
+      <p>$35</p>
+      <button onclick="addToCart('Stylish Sunglasses',35)">Add to Cart</button>
+    </div>
+  </section>
+
+
+  <section class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: $<span id="cart-total">0</span></h3>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+  </footer>
+
+  <script src="eco.js"></script>
+</body>
+</html>
